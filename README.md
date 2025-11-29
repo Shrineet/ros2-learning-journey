@@ -1,26 +1,18 @@
 # ROS2 Learning Journey
 
-Welcome to my **ROS2 beginner projects repository**! 🚀
+My first ROS2 beginner project using Python.  
 
-This repo contains my first ROS2 projects, including:
+## Projects
 
-- **Publisher Node** (`simple_publisher.py`):  
-  Sends messages to a topic (`chatter`) every second.
+- **Publisher Node** (`simple_publisher.py`) → publishes messages to `chatter` topic every second.  
+- **Subscriber Node** (`simple_subscriber.py`) → subscribes to `chatter` topic and prints received messages.
 
-- **Subscriber Node** (`simple_subscriber.py`):  
-  Listens to the `chatter` topic and prints messages received.
-
-## 🛠 Technologies & Concepts Learned
-
-- ROS2 Humble  
-- Python 3  
-- ROS2 Nodes, Topics, Publisher, Subscriber  
-- colcon workspace building  
-- Source setup and environment management
-
-## 📁 How to Run
-
-1. Source ROS2 environment:
+## How to Run
 
 ```bash
 source /opt/ros/humble/setup.bash
+cd ~/ros_ws
+colcon build
+source install/setup.bash
+ros2 run my_first_pkg simple_publisher
+ros2 run my_first_pkg simple_subscriber
